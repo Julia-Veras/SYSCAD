@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet"  href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+
+<script>
+
+    myfunction =(icon) =>{ 
+        let tabe = document.getElementById("tabe");
+        icon.classList.toggle('fa-close');
+        tabe.classList.toggle("tabe-open")
+        
+    }
+
+</script>
+
+
+<body>
+   
+    <div id="pai">
+
+    
+<header id="header">
+    <input type="checkbox" id="chec">
+         <label for="chec" id="label1">
+          <i class="fa-solid fa-bars" id="ham-menu" onclick="myfunction(this)" aria-hidden="true"></i>        
+         
+         </label>
+                 <nav>
+        <h2>SYSCAD</h2>
+
+        <ul>
+            <label for="chec">
+           
+        </label>
+            <li id="fula-menu"><img src="img/fulano - Copia.png" width="50"><h4>Fulano Junior</h4></li>
+            <li id="onli"><i class="fa fa-circle" style="font-size: 10px; color: green; position: relative;"></i><p>Online</p></li>
+            <li id="menu-nav"><p>Menu</p></li>
+            <li id="ususfa"><i class="fas fa-users" style="color: #fff; position: relative; top: 15%; padding-left: 5px;"></i><h5>Usuários</h5></li>
+            
+        </ul>
+
+       
+               </nav>
+    <h1>SYSCAD</h1>    
+    
+
+    <img src="img/fulano - Copia.png" id="img2">
+    <h3>Fulano Junior</h3>
+
+</header> 
+
+    <section>
+
+     <span class="usu1"><strong>Usuários</strong>  Gerenciamento de usuários do sistema</strong></span>
+
+     <div id="cont2">
+
+        <span style="color: rgb(24, 20, 20); margin-right: 5px; cursor: pointer;">
+    <i class="fas fa-home" style="font-size: 15px; color:rgb(19, 17, 17); margin-right: 5px; cursor: pointer;" ></i> Home
+        </span>
+     <span style="color: gray;">></span>
+         <span style="color: gray; cursor: pointer;">   
+    <i class="fas fa-users" style="font-size:15px; color:gray; cursor: pointer;"> </i> Usuários
+         </span>
+
+    </div>
+
+    </section><br><br>
+
+    
+      <div id="main">
+
+        <div id="tabe">
+        <table border="0">
+            <tr>
+                <td colspan="3" class="tematab">Lista de Usuários</td>
+            </tr>
+            <tr id="strong">
+                <td>Foto</td>
+                <td>Nome</td>
+                <td>E-mail</td>
+                <td>Admin</td>
+                <td>Criado em</td>
+                <td>Ações</td>
+            </tr>
+            <tr>
+                <td > <img src="img/fulano - Copia.png" class="imgta"> </td>
+                <td>Fulano</td>
+                <td>fulano@gmail.com</td>
+                <td>Sim</td>
+                <td>02/04/2018</td>
+                <td> <button id="editar">Editar</button><button>Excluir</button></td>
+            </tr>
+            <tr>
+                <td> <img src="img/fulano - Copia.png" class="imgta"> </td>
+                <td>Fulano</td>
+                <td>fulano@gmail.com</td>
+                <td>Sim</td>
+                <td>02/04/2018</td>
+                <td> <button id="editar">Editar</button><button>Excluir</button></td>
+            </tr>
+            <tr>
+                <td> <img src="img/fulano - Copia.png" class="imgta"> </td>
+                <td>Fulano</td>
+                <td>fulano@gmail.com</td>
+                <td>Sim</td>
+                <td>02/04/2018</td>
+                <td> <button id="editar">Editar</button><button>Excluir</button></td>
+            </tr>
+
+        </table>
+    </div>
+
+        
+    <div id="area-lateral">
+
+        <div id="estatic">
+        <span id="nvusu">
+            <img src="img/nvusu.jpg" width="200">
+            <span id="titu1">
+            <h1 id="num">44</h1>
+            <p id="p0">Novos Usuários</p></span>
+        </span>
+
+        <span id="admin">
+            <img src="img/admin.jpg" width="200">
+            <span id="titu2">
+            <h1 id="num1">15</h1>
+            <p id="p1">Administração</p></span>
+            
+        </span>
+        </div>
+   
+
+
+    <div id="last">
+        <div id="formulario">
+            <form action="">
+                <h2>Novo Usuário</h2><br>
+                        
+
+            <label id="name">Nome</label><br>
+               <input type="text" placeholder="Digite o nome do Usuário" oninput="nameValidate()" class="inputs require">  
+               <span class="span-require">Nome deve ter mínimo 3 caracteres</span> <br><br>
+
+            <label for="">Gênero</label><br>
+               <input type="radio" name="sexo" id="" value="M"><span class="ma-fe">Masculino</span>  <br>
+               <input type="radio" name="sexo" id="" value="F"><span class="ma-fe">Feminino</span>    <br><br>
+
+            <label for="">Nascimento</label><br>
+               <input type="date">  <br><br>
+
+            <label for="">País</label><br>
+                <select name="" id="">
+                <option value="">Selecione um país</option>
+                <option value="">Brasil</option>
+                <option value="">Eua</option>
+               </select>  <br><br>
+
+            <label for="">E-mail</label><br>
+               <input type="email" name="" id="" class="inputs require" oninput="emailValidate()">
+               <span class="span-require">Digite um email válido</span>  <br><br>
+
+            <label for="">Senha</label><br>
+               <input type="password"  placeholder="Crie uma senha" id="senha" class="inputs require" oninput="senhaValidate()">
+               <span id="icon" onclick="ShowHide()"></span>
+               <span class="span-require">Digite uma senha de no mínimo 8 caracteres</span> <br><br>
+
+            <label for="">Foto</label><br>
+              <input type="file"><br><br>   
+
+              <input type="checkbox" id="ad"> <label for="ad">Administrador</label><br><br>
+              
+
+             
+              <button class="btn6">Salvar</button>
+              
+            </form>
+        </div>
+        
+
+    </div>
+</div>
+
+ 
+  <div id="site-info"> 
+    <footer>
+        <p>Projeto desenvolvido pela aluna <strong style="font-size: 18px;color: #2f15c2;"> Julia Veras</strong> do Curso de informática da EEEP José de Barcelos.</p>
+        <strong id="sys">SYSCAD</strong>
+    </footer>
+    
+</div> 
+
+    
+</div>
+</div>
+</body>
+</html>
+
+<script>
+    function Puxarmenu(){
+        document.getElementById('ham-menu').style.marginLeft = '0px';
+
+    }
+    
+    function Voltarmenu(){
+        document.getElementById('ham-menu').style.marginLeft = '200px';
+
+    }
+
+
+    const password = document.getElementById('senha');
+    const icon     = document.getElementById('icon');
+
+     function ShowHide(){
+    if(password.type === 'password'){
+        password.setAttribute('type', 'text');
+        icon.classList.add('hide');
+    }
+    else{
+        password.setAttribute('type', 'password');
+        icon.classList.remove('hide');
+    }
+}
+
+</script>
+
+<script>
+      const form   = document.getElementById('form');
+      const campos = document.querySelectorAll('.require');
+      const spans  = document.querySelectorAll('.span-require');
+      const emailRegex  = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.w+([-.]\w+)*$/;
+
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        nameValidate();
+        emailValidate();
+        senhaValidate();
+      });
+
+      function setError(index){
+        campos[index].style.border = '2px solid red';
+        spans[index].style.display = 'block';
+
+      }
+      
+      function removeError(index){
+        campos[index].style.border = '2px solid #5fe36a';
+        spans[index].style.display = 'none';
+      }
+
+      function nameValidate(){
+        if(campos[0].value.length < 3)
+        {
+            setError(0);
+           
+           
+        }
+        else{
+            removeError(0);
+        }
+      }
+
+      function emailValidate(){
+        if(emailRegex.test(campos[1].value)){
+            
+            removeError(1);
+        }
+        else{
+              setError(1);
+           
+        }
+      }
+
+      function senhaValidate(){
+        if(campos[2].value.length < 8){
+
+            setError(2);
+        }
+        else{
+            removeError(2);
+        }
+      }
+</script>
